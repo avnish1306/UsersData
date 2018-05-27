@@ -1,0 +1,22 @@
+extends layout
+
+block content
+
+  nav.navbar.navbar-inverse
+    .navbar-brand User Registration
+  #register.container.container-fluid
+    form.form-horizontal(action="/sent/submit/", method="POST")
+      h1  Register 
+      |         
+      p.form-group
+        label.name(for="userName")  User Name 
+        |             
+        input#userName.form-control(type="text", name="userName", required="required", placeholder="Enter Your Name")
+      |         
+      p.form-group
+        label.email(for="userEmail")  Email Id 
+        |             
+        input#userEmail.form-control(type="email", name="userEmail", required="required", placeholder="Enter Your Email Id")
+      |         
+      p.submit
+        input.btn.btn-default(type="submit", value="Register")
